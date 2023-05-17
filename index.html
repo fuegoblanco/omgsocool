@@ -5,34 +5,41 @@
 	<meta charset=utf-8>
 
 
-	<link rel="preload" as="font" href="assets/PressStart2P-Regular.ttf" type="font/ttf" />
+	<link rel="preload" as="font" href="assets/fonts/Silkscreen.ttf" type="font/ttf" />
 
 	<style>
 		@font-face {
-			font-family: 'PressStart2P';
-			src: url('assets/PressStart2P-Regular.ttf');
+			font-family: 'Silkscreen';
+			src: url('assets/fonts/Silkscreen.ttf');
 		}
 
 		body {
+			font-family: 'Silkscreen';
 
-			font-family: 'PressStart2P';
+		}
+		
+		gc {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
 		}
 
 
-
-		canvas {
-			width: 100%;
-			height: 100%;
-			font-family: 'PressStart2P';
-		}
+		
 	</style>
 </head>
 
 <body>
-
+	<div class="gc">
+		<div id="game"></div>
+	</div>
+	
+	<div style="font-family:PressStart2P; position:absolute; left:-1000px; visibility:hidden;">.</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.js"></script>
-	<script src="dist/app.js"></script>
+	<script src="/dist/app.js"></script>
 </body>
 
 </html>
